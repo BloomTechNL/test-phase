@@ -1,0 +1,82 @@
+{
+  "name": "test-phase",
+  "version": "0.1.0",
+  "description": "Track whether your test code is running in the given, when or then phase.",
+  "keywords": [
+    "testing",
+    "given",
+    "when",
+    "then",
+    "bdd",
+    "gherkin",
+    "test-phase",
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "license": "MIT",
+  "author": "Timber Kerkvliet",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./eslint-plugin": {
+      "import": {
+        "types": "./dist/eslint-plugin.d.ts",
+        "default": "./dist/eslint-plugin.js"
+      },
+      "require": {
+        "types": "./dist/eslint-plugin.d.cts",
+        "default": "./dist/eslint-plugin.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "eslint": ">=10"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "eslint": "^10.15.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BloomTechNL/test-phase.git"
+  },
+  "homepage": "https://github.com/BloomTechNL/test-phase#readme",
+  "bugs": {
+    "url": "https://github.com/BloomTechNL/test-phase/issues"
+  }
+}
