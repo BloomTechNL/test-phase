@@ -1,6 +1,6 @@
 {
   "name": "test-phase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Track whether your test code is running in the given, when or then phase.",
   "keywords": [
     "testing",
