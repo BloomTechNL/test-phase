@@ -7,7 +7,7 @@ export default defineConfig({
   clean: true,
   sourcemap: true,
   target: 'es2020',
-  // Makes `require('test-phase/eslint-plugin')` return the plugin itself instead of `{ default }`.
+  // Makes `require('@bloom-group/test-phase/eslint-plugin')` return the plugin itself instead of `{ default }`.
   cjsInterop: true,
   splitting: true,
 });

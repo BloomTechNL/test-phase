@@ -10,13 +10,13 @@ reject them during `when`.
 ## Install
 
 ```bash
-npm install --save-dev test-phase
+npm install --save-dev @bloom-group/test-phase
 ```
 
 ## Usage
 
 ```ts
-import { Given, When, Then } from 'test-phase';
+import { Given, When, Then } from '@bloom-group/test-phase';
 
 it('places an order', async () => {
   await Given(async () => {
@@ -36,7 +36,7 @@ it('places an order', async () => {
 Anywhere in your code you can check the phase:
 
 ```ts
-import { inGivenPhase } from 'test-phase';
+import { inGivenPhase } from '@bloom-group/test-phase';
 
 class FakeClock {
   set(time: Date) {
@@ -73,12 +73,12 @@ The type `'unknown' | 'given' | 'when' | 'then'`.
 
 ## ESLint plugin
 
-`test-phase/eslint-plugin` ships two rules. The `recommended` config turns both on
+`@bloom-group/test-phase/eslint-plugin` ships two rules. The `recommended` config turns both on
 as errors:
 
 ```ts
 // eslint.config.js
-import testPhase from 'test-phase/eslint-plugin';
+import testPhase from '@bloom-group/test-phase/eslint-plugin';
 
 export default [
   testPhase.configs.recommended,
@@ -88,7 +88,7 @@ export default [
 Or pick the rules yourself:
 
 ```ts
-import testPhase from 'test-phase/eslint-plugin';
+import testPhase from '@bloom-group/test-phase/eslint-plugin';
 
 export default [
   {

@@ -146,7 +146,7 @@ const oneOfEachPhasePerTest: Rule.RuleModule = {
 };
 
 const plugin = {
-  meta: { name: 'test-phase' },
+  meta: { name: '@bloom-group/test-phase' },
   rules: {
     'no-assertions-in-given-or-when': noAssertionsInGivenOrWhen,
     'one-given-when-then-per-test': oneOfEachPhasePerTest,
